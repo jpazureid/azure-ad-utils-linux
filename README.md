@@ -19,7 +19,7 @@ sudo yum install -y powershell
 pwsh
 ```
 
-## AzureADUtilsLinux.psm1 を取得します。
+## AzureADUtilsLinux.psm1 の取得
 
 以下は、適当な Web サーバー上にファイルを配置し取得した際の例です。
 
@@ -66,6 +66,8 @@ Function        Remove-AzureADOnPremUsers                          0.0        Az
 
 ### モジュールが読み込まれたことの確認
 
+Get-Module を実行し、AzureADUtilsLinux が結果に含まれることを確認します。
+
 ```powershell
 PS /home/contoso> Get-Module
 
@@ -78,6 +80,8 @@ Script     2.0.0      PSReadLine                          {Get-PSReadLineKeyHand
 ```
 
 ### AzureADUtilsLinux の実行
+
+以下のようにして AzureADUtilsLinux を実行します。事前に Azure AD 上にアプリケーションを登録いただき、client id と client secret をご準備ください。
 
 ```powershell
 $ClientID     = "<Application ID>"
